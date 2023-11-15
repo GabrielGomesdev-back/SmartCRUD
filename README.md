@@ -39,7 +39,7 @@ This is a Rest Api that uses
             - Description: This request will create a new Incident and set automatically the dates.  
 
       - [POST] http://localhost:8084/api/v1/crud/create-full-incident  
-         - Response Body: { "name": "Incident 1", "description": "That happens...", createdAt: "12/11/2023", updatedAt: "13/11/2023", closedAt: "14/11/2023" }  
+         - Response Body: { "name": "Incident 1", "description": "That happens...", "createdAt": "13/11/2023", "updatedAt": "13/11/2023", "closedAt": "13/11/2023" }
             - Description: This request will create a new Incident with the information what are passed in the request and the unique value what are genereated is the idIncident.  
 
 
@@ -58,11 +58,11 @@ This is a Rest Api that uses
   - Url's to update an Incident:
 
     - [PUT] http://localhost:8084/api/v1/crud/update-incident
-        - Response Body: { "idIncident": 2, "name": "Incident 2", "description": "That happens..."}
+        - Response Body: { "idIncident": 1, "name": "Incident 2", "description": "That happens..."}
             - Description: This request will update the Incident and set automatically the dates.  
 
     - [PUT] http://localhost:8084/api/v1/crud/update-full-incident
-        - Response Body: { "idIncident": 2, "name": "Incident 1", "description": "That happens...", createdAt: "12/11/2023", updatedAt: "13/11/2023", closedAt: "14/11/2023" }
+        - Response Body: { "idIncident": 1, "name": "Incident 1", "description": "That happens...", "createdAt": "13/11/2023", "updatedAt": "13/11/2023", "closedAt": "13/11/2023" }
             - Description: This request will update the Incident with the information what are passed in the request.
 
 
