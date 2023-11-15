@@ -63,7 +63,7 @@ public class CrudService {
         incident.setDescription(json.get("description"));
         incident.setCreatedAt(utils.StringToCalendar(json.get("createdAt")));
         incident.setUpdatedAt(utils.StringToCalendar(json.get("updatedAt")));
-        incident.setClosedAt(utils.StringToCalendar(json.get("closedAt")))
+        incident.setClosedAt(utils.StringToCalendar(json.get("closedAt")));
         incidentRepository.save(incident);
         return utils.SuccesMessage();
     }
