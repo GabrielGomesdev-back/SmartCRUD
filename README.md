@@ -2,21 +2,18 @@
 
 This is a Rest Api that uses
 
-   - [SpringBoot](https://spring.io/projects/spring-boot): This is a Java open-source framework used in order to build
-                                                           rest api's.
+   - [SpringBoot](https://spring.io/projects/spring-boot): This is a Java open-source framework used in order to build rest api's.
 
-   - [Lombok](https://www.baeldung.com/intro-to-project-lombok): This is a Java Library that look for repeat less code 
-                                                                 in order to enhance the produtivity.(At this project are 
-                                                                 used for make the code more clean and less verbose)
+   - [Lombok](https://www.baeldung.com/intro-to-project-lombok): This is a Java Library that look for repeat less code in order to enhance the produtivity.(At this project are 
+                    used for make the code more clean and less verbose)
 
    - [AssertJ](https://assertj.github.io/doc/): Library that used for make Asserts. (At this project are used to manipulate objects)
 
-   - [H2 Database](https://www.baeldung.com/spring-boot-h2-database): Is a realtional database wrote in Java.
-                                                                      (At this project used to persist the data created)
+   - [H2 Database](https://www.baeldung.com/spring-boot-h2-database): Is a realtional database wrote in Java. (At this project used to persist the data created)
 
-   - [Spring Data JPA](https://www.treinaweb.com.br/blog/iniciando-com-spring-data-jpa): Is a framework that make 
-                                                                                         part of spring boot eco system, 
-                                                                                         used to make interactions with database.
+   - [Spring Data JPA](https://www.treinaweb.com.br/blog/iniciando-com-spring-data-jpa): Is a framework that make part of spring boot eco system, used to make interactions with database.  
+
+   - [Spring Doc](https://springdoc.org/): Java library that helps to automate the generation of API documentation.
 
 ### How to run the project
 
