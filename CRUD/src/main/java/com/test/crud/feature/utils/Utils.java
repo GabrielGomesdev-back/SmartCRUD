@@ -1,6 +1,7 @@
 package com.test.crud.feature.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.test.crud.data.entity.IncidentEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,7 +14,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 
 @Service
 @Transactional
@@ -34,7 +34,7 @@ public class Utils {
         return cal;
     }
 
-    public HashMap<String, Object> FormatDate(IncidentEntity object, HashMap<String, Object> jsonIncident) throws IOException {
+    public ObjectNode FormatDate(IncidentEntity object, ObjectNode jsonIncident) throws IOException {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date createdAt = object.getCreatedAt().getTime();
         Date updatedAt = object.getUpdatedAt().getTime();
@@ -68,24 +68,26 @@ public class Utils {
 
     // Useful methods for cast Entities for HashMaps
 
-    public HashMap<String, Object> ObjectToMap(IncidentEntity object) throws IOException {
+    public ObjectNode ObjectToMap(IncidentEntity object) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        HashMap<String,Object> map = mapper.convertValue(object, HashMap.class);
+        ObjectNode map = mapper.convertValue(object, ObjectNode.class);
         return map;
     }
 
     // Useful methods for messages and returns
 
-    public HashMap<String, Object> SuccesMessage() {
-        HashMap<String, Object> dto = new HashMap<>();
+    public ObjectNode SuccesMessage() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectNode dto = objectMapper.createObjectNode();
         dto.put("status", "succes");
         dto.put("isOk", true);
         dto.put("message", "Operation carried out successfully");
         return dto;
     }
 
-    public HashMap<String, Object> ErrorMessage() {
-        HashMap<String, Object> dto = new HashMap<>();
+    public ObjectNode ErrorMessage() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectNode dto = objectMapper.createObjectNode();
         dto.put("status", "error");
         dto.put("isOk", false);
         dto.put("message", "Operation cannot carried out");
